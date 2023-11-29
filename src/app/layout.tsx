@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { NavBar } from '@/shared/components'
+import { NavBar } from '@/shared/components/'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
 

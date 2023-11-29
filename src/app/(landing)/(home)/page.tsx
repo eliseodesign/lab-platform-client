@@ -4,7 +4,7 @@ import "./card.css"
 
 const Inicio = () => {
   return (
-    <main className='flex flex-col justify-cente'>
+    <main className='flex flex-col justify-center'>
       <header className="main-header">
         <div className="header-content">
           <img src="/img/logo/fablab-logo.svg" alt="logo-fablab" />
