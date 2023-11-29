@@ -6,10 +6,10 @@ interface IArticleBase {
 	keywords: string
 	createdAt: string
 	articleType: "notice" | "guie"
+	systemUser: SystemUser
 }
 
 // Interfaz completa que extiende la interfaz base y agrega la propiedad systemUser
 interface IArticleComplete extends IArticleBase {
-	systemUser: SystemUser
 	content: string
 }

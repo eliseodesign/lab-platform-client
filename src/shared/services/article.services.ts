@@ -1,8 +1,8 @@
 
-  export async function getArticle(): Promise<IArticleBase[]> {
+  export async function getArticle(): Promise<ResponseProv<IArticleBase[]>> {
     try {
-      const response = await fetch("api/article/notice");
-      const result: IArticleBase[] = await response.json();
+      const response = await fetch("https://lab-platform-back.onrender.com/api/article/all/notice");
+      const result: ResponseProv<IArticleBase[]>= await response.json();
       return result;
     } catch (error) {
       // Manejo de errores
