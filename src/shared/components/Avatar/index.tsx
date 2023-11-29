@@ -1,4 +1,5 @@
-import React, { CSSProperties, forwardRef, ReactNode } from "react";
+"use client"
+import React, { CSSProperties, forwardRef } from "react";
 import { colors } from './colorPalette'
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 
@@ -19,8 +20,8 @@ interface AvatarFallbackProps extends React.ComponentProps<typeof AvatarPrimitiv
 const getFallbackNameAndColor = (name: string): string[] => {
   const words = name.split(" ");
   const initials = words.map((word) => word.charAt(0).toUpperCase()).join("");
-  
-  return [initials, colors[initials[0]]];
+
+  return [initials, colors[initials[0].toLocaleLowerCase()]];
 };
 
 const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
