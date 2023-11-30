@@ -11,10 +11,10 @@
     }
   }
   
-  export async function getBlogById(id: number): Promise<IArticleComplete | null> {
+  export async function getArticleByName(name: string): Promise<ResponseProv<IArticleComplete> | null> {
     try {
-      const response = await fetch(`api/article/notice/${id}`);
-      const result: IArticleComplete | null = await response.json();
+      const response = await fetch(`https://lab-platform-back.onrender.com/api/article/one/${name}`);
+      const result: ResponseProv<IArticleComplete> | null = await response.json();
       return result;
     } catch (error) {
       // Manejo de errores
