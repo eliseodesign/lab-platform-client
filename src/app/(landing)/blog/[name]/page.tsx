@@ -4,11 +4,8 @@ import Markdown from 'markdown-to-jsx';
 import { Code } from '@/shared/components/'
 
 
-export const BlogView = async ({ params }: { params: { name: string } }) => {
-
-    console.log("params", params)
+async function BlogView ({ params }: { params: { name: string } }) {
     const response = await getArticleByName(params.name)
-    console.log(response)
     const blogContent = response?.data.content || "# Se produjo un error"
 
     return (

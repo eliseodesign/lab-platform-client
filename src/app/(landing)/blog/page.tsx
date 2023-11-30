@@ -6,7 +6,6 @@ import { getArticle } from '@/shared/services/article.services';
 async function Blog() {
 
     const response = await getArticle();
-    console.log(response.data[0].systemUser)
 
   return (
     <section className='pt-[100px]'>

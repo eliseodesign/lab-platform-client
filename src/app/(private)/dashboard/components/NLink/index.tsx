@@ -15,8 +15,7 @@ interface NLinkParams {
 
 export const NLink = ({ text, path, children }: NLinkParams) => {
   const pathname = usePathname();
-  const here = "/dashboard/" + path
-  // const onDashboard = pathname.startsWith('/dashboard/'+path);
+  const here = ("/dashboard" + path).trim()
   const isActive = pathname === here;
 
   return (

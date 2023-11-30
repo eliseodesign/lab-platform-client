@@ -38,15 +38,15 @@ function Layout ({
               <HomeSvg />
             </NLink>
 
-            <NLink path="clubs" text="Clubs">
+            <NLink path="/clubs" text="Clubs">
               <ClubSvg />
             </NLink>
 
-            <NLink path="articulos" text="Articulos">
+            <NLink path="/articulos" text="Articulos">
               <ArticleSvg />
             </NLink>
 
-            <NLink path="usuarios" text="Usuarios">
+            <NLink path="/usuarios" text="Usuarios">
              <UserSvg />
             </NLink>
           </nav>
