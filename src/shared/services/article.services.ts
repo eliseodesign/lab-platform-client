@@ -1,4 +1,4 @@
-const baseURL = process.env.BACKEND_API
+const baseURL = "https://lab-platform-back.onrender.com/api"
   export async function getArticle(): Promise<ResponseProv<IArticleBase[]>> {
     try {
       const response = await fetch(`${baseURL}/article/all/notice`);
@@ -23,9 +23,11 @@ const baseURL = process.env.BACKEND_API
     }
   }
   
-  export async function postArticle(body: IArticleComplete): Promise<IArticleComplete | undefined> {
+  export async function postArticle(body: IArticlePost): Promise<IArticleComplete | undefined> {
     try {
-      const response = await fetch(`${baseURL}/article`, {
+      const url = "https://lab-platform-back.onrender.com/api"
+      console.log(url)
+      const response = await fetch(`${url}/article`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

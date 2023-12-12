@@ -13,3 +13,14 @@ interface IArticleBase {
 interface IArticleComplete extends IArticleBase {
 	content: string
 }
+
+interface IArticlePost {
+	title: string;
+	content: string;
+	description: string;
+	keywords: string;
+	createAt: string;
+	articleType: string;
+	articleState: string; 
+	systemUserId: number;
+  }
